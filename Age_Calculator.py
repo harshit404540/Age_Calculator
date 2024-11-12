@@ -34,11 +34,14 @@ def age():
         
 
 if __name__ == "__main__":
-    while True:
-        print('1. Age Calculator')
-        print('2. Exit')
-        user = int(input("Enter option: "))
-        if user == 1:
-            age()
-        elif user == 2:
-            break
+    try:
+        while True:
+            print('1. Age Calculator')
+            print('2. Exit')
+            user = int(input("Enter option: "))
+            if user == 1:
+                age()
+            elif user == 2:
+                break
+    except Exception as e:
+        print(str(e))
